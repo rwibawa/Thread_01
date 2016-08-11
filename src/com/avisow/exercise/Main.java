@@ -11,7 +11,11 @@ public class Main {
         // InterThreadCommunicationExample program = new InterThreadCommunicationExample();
         // ThreadPoolExample program = new ThreadPoolExample();
 //        ProducerConsumerPattern program = new ProducerConsumerPattern();
-        ThreadLocalTest program = new ThreadLocalTest();
+        // ThreadLocalTest program = new ThreadLocalTest();
+//        AtomicIntegerExample program = new AtomicIntegerExample();
+//        Deadlock program = new Deadlock();
+//        CallableExample program = new CallableExample();
+        SemaphoreExample program = new SemaphoreExample();
         program.execute();
 
 //        Singleton1 singleton1 = Singleton1.getInstance();
