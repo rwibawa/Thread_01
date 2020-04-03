@@ -6,7 +6,7 @@ public class Main {
         // write your code here
         System.out.println("Starting..");
 
-        //CyclicBarrierExample program = new CyclicBarrierExample();
+//        CyclicBarrierExample program = new CyclicBarrierExample();
 //        CountDownLatchDemo program = new CountDownLatchDemo();
         // InterThreadCommunicationExample program = new InterThreadCommunicationExample();
         // ThreadPoolExample program = new ThreadPoolExample();
@@ -15,7 +15,9 @@ public class Main {
 //        AtomicIntegerExample program = new AtomicIntegerExample();
 //        Deadlock program = new Deadlock();
 //        CallableExample program = new CallableExample();
-        SemaphoreExample program = new SemaphoreExample();
+//        SemaphoreExample program = new SemaphoreExample();
+
+        Alternate2Threds program = new Alternate2Threds();
         program.execute();
 
 //        Singleton1 singleton1 = Singleton1.getInstance();
