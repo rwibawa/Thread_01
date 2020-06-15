@@ -1,8 +1,10 @@
 package com.avisow.exercise;
 
+import java.util.concurrent.ExecutionException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
         // write your code here
         System.out.println("Starting..");
 
@@ -16,8 +18,11 @@ public class Main {
 //        Deadlock program = new Deadlock();
 //        CallableExample program = new CallableExample();
 //        SemaphoreExample program = new SemaphoreExample();
-
-        Alternate2Threds program = new Alternate2Threds();
+//        Alternate2Threds program = new Alternate2Threds();
+//        Executor01 program = new Executor01();
+//        Executor02 program = new Executor02();
+//        Executor03 program = new Executor03();
+        Executor04 program = new Executor04();
         program.execute();
 
 //        Singleton1 singleton1 = Singleton1.getInstance();
