@@ -9,18 +9,18 @@ public class Deadlock {
         thread2.start();
     }
 
-    String resourceA = "Java";
-    String resourceB = "Linux";
+    final String resourceA = "Java";
+    final String resourceB = "Linux";
 
     Thread thread1 = new Thread() {
         public void run() {
             while (true) {
                 synchronized (resourceA) {
-//                    try {
-//                        Thread.sleep(10);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
 
                     synchronized (resourceB) {
                         System.out.println(resourceA + " " + resourceB);
@@ -30,15 +30,13 @@ public class Deadlock {
         }
     };
 
-    Thread thread2 = new Thread() {
-        public void run() {
-            while (true) {
-                synchronized (resourceB) {
-                    synchronized (resourceA) {
-                        System.out.println(resourceB + " " + resourceA);
-                    }
+    Thread thread2 = new Thread(() -> {
+        while (true) {
+            synchronized (resourceB) {
+                synchronized (resourceA) {
+                    System.out.println(resourceB + " " + resourceA);
                 }
             }
         }
-    };
+    });
 }
